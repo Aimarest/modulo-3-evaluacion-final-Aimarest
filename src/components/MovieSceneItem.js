@@ -2,7 +2,7 @@ import "../styles/MovieSceneItem.scss";
 
 function MovieSceneItem(props) {
   return (
-    <navLink to="#" className="MovieScene__Item">
+    <navLink to={`/movie/${props.id}`} className="MovieScene__Item">
       <img
         src={props.movieScene.poster}
         className="MovieScene__card__image"

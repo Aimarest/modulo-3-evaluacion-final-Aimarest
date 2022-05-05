@@ -4,7 +4,7 @@ function MovieSceneList(props) {
   const scenes = props.movies.map((movieScene, index) => {
     return (
       <li className="MovieScene__card" key={index}>
-        <MovieSceneItem movieScene={movieScene} />
+        <MovieSceneItem movieScene={movieScene} id={index} />
       </li>
     );
   });
