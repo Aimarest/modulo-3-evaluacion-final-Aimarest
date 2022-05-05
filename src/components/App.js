@@ -20,6 +20,14 @@ function App() {
       });
     }
   }, []);
+  const getYears = () => {
+    const yearMovies = movieScenes.map((movie) => movie.year);
+    const uniqueYear = yearMovies.filter((movie, i) => {
+      return yearMovies.indexOf(movie) === i;
+    });
+    return uniqueYear;
+  };
+
   return (
     <div className="App">
       <Header />
@@ -30,7 +38,7 @@ function App() {
               path="/"
               element={
                 <>
-                  <Filters />
+                  <Filters years={getYears()} />
                   <MovieSceneList movies={movieScenes} />
                 </>
               }

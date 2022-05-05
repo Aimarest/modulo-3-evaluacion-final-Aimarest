@@ -9,7 +9,7 @@ function getApiMovies() {
           poster: movie.poster,
           name: movie.movie,
           fullLine: movie.full_line,
-          year: movie.year,
+          year: parseInt(movie.year),
           director: movie.director,
           audio: movie.audio,
         };

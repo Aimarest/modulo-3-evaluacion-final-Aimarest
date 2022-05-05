@@ -1,7 +1,14 @@
 import "../styles/Filters.scss";
+import FilterName from "./FilterName";
+import FilterYear from "./FilterYear";
 
-function Filters() {
-  return <div className="Filters"></div>;
+function Filters(props) {
+  return (
+    <form className="Filters">
+      <FilterName />
+      <FilterYear years={props.years} />
+    </form>
+  );
 }
 
 export default Filters;
