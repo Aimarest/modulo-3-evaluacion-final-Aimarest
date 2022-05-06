@@ -8,11 +8,14 @@ function FilterYear(props) {
       );
     });
   };
+  const handleChangeYear = (ev) => {
+    props.filterByYear(ev.target.value);
+  };
   return (
     <>
       <label htmlFor="year">Filter by year</label>
-      <select id="year">
-        <option value="All">All</option>
+      <select id="year" onChange={handleChangeYear}>
+        <option value="">All</option>
         {renderYear()}
       </select>
     </>

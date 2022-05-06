@@ -1,4 +1,7 @@
-function FilterName() {
+function FilterName(props) {
+  const handleChangeName = (ev) => {
+    props.filterByName(ev.target.value);
+  };
   return (
     <>
       <label htmlFor="inputSearch">Search movie</label>
@@ -8,6 +11,7 @@ function FilterName() {
         type="search"
         name="inputSearch"
         placeholder="Filter movies"
+        onChange={handleChangeName}
       />
     </>
   );
