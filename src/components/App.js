@@ -14,6 +14,7 @@ function App() {
   const [filterYear, setFilterYear] = useState("");
   const [filterName, setFilterName] = useState("");
   useEffect(() => {
+    // Usamos un useEffect para ejecutar el fetch() una sóla vez al cargar la página.
     if (movieScenes.length === 0) {
       getApiMovies().then((data) => {
         //Guardo en el ls lo que me ha devuelto el fetch
@@ -55,8 +56,6 @@ function App() {
       } else {
         if (movie.name.toLowerCase().includes(filterName.toLowerCase())) {
           return true;
-        } else {
-          return "There are no movies with that name";
         }
       }
     });
