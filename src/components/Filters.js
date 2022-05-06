@@ -3,6 +3,7 @@ import FilterName from "./FilterName";
 import FilterYear from "./FilterYear";
 
 function Filters(props) {
+  console.log(props.filterName);
   const handleForm = (event) => {
     event.preventDefault();
   };

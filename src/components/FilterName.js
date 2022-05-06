@@ -14,7 +14,7 @@ function FilterName(props) {
         name="inputSearch"
         placeholder="Filter movies"
         onChange={handleChangeName}
-        value={props.FilterName}
+        value={props.filterName}
       />
     </>
   );

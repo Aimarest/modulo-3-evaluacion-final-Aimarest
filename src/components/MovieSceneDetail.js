@@ -12,7 +12,7 @@ function MovieSceneDetail() {
   const movieIndex = routeData !== null ? routeData.params.movieIndex : "";
   //Buscamos toda la información de la escena.
   const movies = objectToExport.get("movies", []);
-  const movieScene = movies[movieIndex];
+  const movieScene = movies.find((scene) => scene.id == movieIndex);
   console.log(movieScene);
   return (
     <section className="MovieSceneDetail">

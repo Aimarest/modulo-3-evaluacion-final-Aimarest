@@ -10,21 +10,30 @@ import MovieSceneList from "./MovieSceneList";
 import MovieSceneDetail from "./MovieSceneDetail";
 
 function App() {
+  //Buscar en localStorage el valor del input del filtro.
+  const inputText = objectToExport.get("inputText", "");
   const [movieScenes, setMovieScenes] = useState(
     objectToExport.get("movies", [])
   );
   const [filterYear, setFilterYear] = useState("");
-  const [filterName, setFilterName] = useState("");
+  const [filterName, setFilterName] = useState(inputText);
   useEffect(() => {
     // Usamos un useEffect para ejecutar el fetch() una sóla vez al cargar la página.
     if (movieScenes.length === 0) {
       getApiMovies().then((data) => {
+        data = data.map((scene, index) => ({
+          ...scene,
+          id: index,
+        }));
         //Guardo en el ls lo que me ha devuelto el fetch
         objectToExport.set("movies", data);
         //Modifico la variable de estado del array de películas.
         setMovieScenes(data);
       });
     }
+    return () => {
+      objectToExport.set("movies", []);
+    };
   }, []);
 
   //Función que agrupa los años de las películas en una constante.
@@ -46,6 +55,7 @@ function App() {
   //Fitro por nombre:
   const filterByName = (value) => {
     setFilterName(value);
+    objectToExport.set("inputText", value);
   };
 
   const movieFilters = movieScenes
@@ -61,11 +71,6 @@ function App() {
         }
       }
     });
-  //Guardar en el localStorage las películas después de filtrarlas
-  useEffect(() => {
-    objectToExport.set("movies", movieFilters);
-  }, [movieFilters]);
-
   return (
     <div className="App">
       <Header />
