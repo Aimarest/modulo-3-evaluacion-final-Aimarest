@@ -3,8 +3,11 @@ import FilterName from "./FilterName";
 import FilterYear from "./FilterYear";
 
 function Filters(props) {
+  const handleForm = (event) => {
+    event.preventDefault();
+  };
   return (
-    <form className="Filters">
+    <form className="Filters" onSubmit={handleForm}>
       <FilterName
         filterByName={props.filterByName}
         filterName={props.filterName}
