@@ -1,11 +1,13 @@
 import "../styles/App.scss";
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { matchPath, useLocation } from "react-router";
 import getApiMovies from "../services/MoviesApi";
 import objectToExport from "../services/LocalStorage";
 import Header from "./Header";
 import Filters from "./Filters";
 import MovieSceneList from "./MovieSceneList";
+import MovieSceneDetail from "./MovieSceneDetail";
 
 function App() {
   const [movieScenes, setMovieScenes] = useState(
@@ -59,6 +61,15 @@ function App() {
         }
       }
     });
+  //Buscar cual es la pelicula de la que quiero mostrar el detalle.
+  //Obtenemos la ruta de la aplicación
+  const { pathname } = useLocation();
+  //Buscamos si coincide con la ruta dinámica
+  const dataPath = matchPath("/movie/:movieIndex", pathname);
+  //Buscando el index de la película
+  const movieIndex = dataPath !== null ? dataPath.params.movieIndex : null;
+  //Buscamos toda la información de la escena.
+  const movieFound = movieScenes.find((movie) => index === movieIndex);
   return (
     <div className="App">
       <Header />
@@ -79,6 +90,10 @@ function App() {
                   <MovieSceneList movies={movieFilters} />
                 </>
               }
+            />
+            <Route
+              path="/movie/:movieIndex"
+              element={<MovieSceneDetail movie={movieFound} />}
             />
           </Routes>
         </section>
