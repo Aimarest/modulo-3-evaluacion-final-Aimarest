@@ -7,7 +7,7 @@ function Filters(props) {
     <form className="Filters">
       <FilterName
         filterByName={props.filterByName}
-        setFilterName={props.setFilterName}
+        filterName={props.filterName}
       />
       <FilterYear years={props.years} filterByYear={props.filterByYear} />
     </form>

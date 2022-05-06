@@ -1,5 +1,7 @@
 function FilterName(props) {
   const handleChangeName = (ev) => {
+    ev.preventDefault();
+
     props.filterByName(ev.target.value);
   };
   return (
@@ -11,8 +13,8 @@ function FilterName(props) {
         type="search"
         name="inputSearch"
         placeholder="Filter movies"
-        value={props.setFilterName}
         onChange={handleChangeName}
+        value={props.FilterName}
       />
     </>
   );

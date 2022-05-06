@@ -71,6 +71,7 @@ function App() {
               element={
                 <>
                   <Filters
+                    filterName={filterName}
                     years={getYears()}
                     filterByYear={filterByYear}
                     filterByName={filterByName}
