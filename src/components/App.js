@@ -61,15 +61,11 @@ function App() {
         }
       }
     });
-  //Buscar cual es la pelicula de la que quiero mostrar el detalle.
-  //Obtenemos la ruta de la aplicación
-  const { pathname } = useLocation();
-  //Buscamos si coincide con la ruta dinámica
-  const dataPath = matchPath("/movie/:movieIndex", pathname);
-  //Buscando el index de la película
-  const movieIndex = dataPath !== null ? dataPath.params.movieIndex : null;
-  //Buscamos toda la información de la escena.
-  const movieFound = movieScenes.find((movie) => index === movieIndex);
+  //Guardar en el localStorage las películas después de filtrarlas
+  useEffect(() => {
+    objectToExport.set("movies", movieFilters);
+  }, [movieFilters]);
+
   return (
     <div className="App">
       <Header />
@@ -87,13 +83,14 @@ function App() {
                     filterByName={filterByName}
                     setFilterName={setFilterName}
                   />
+                  <h1>total: {movieFilters.length}</h1>
                   <MovieSceneList movies={movieFilters} />
                 </>
               }
             />
             <Route
               path="/movie/:movieIndex"
-              element={<MovieSceneDetail movie={movieFound} />}
+              element={<MovieSceneDetail /*movie={movieFound} */ />}
             />
           </Routes>
         </section>
