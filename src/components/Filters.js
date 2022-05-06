@@ -5,7 +5,10 @@ import FilterYear from "./FilterYear";
 function Filters(props) {
   return (
     <form className="Filters">
-      <FilterName filterByName={props.filterByName} />
+      <FilterName
+        filterByName={props.filterByName}
+        setFilterName={props.setFilterName}
+      />
       <FilterYear years={props.years} filterByYear={props.filterByYear} />
     </form>
   );

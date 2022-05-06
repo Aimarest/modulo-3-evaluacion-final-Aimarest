@@ -42,13 +42,9 @@ function App() {
   };
   //Fitro por nombre:
   const filterByName = (value) => {
-    if (filterName.includes(value)) {
-      const nameSearched = filterName.filter((movie) => movie !== value);
-      setFilterName(nameSearched);
-    } else {
-      setFilterName([...filterName, value]);
-    }
+    setFilterName(value);
   };
+
   const movieFilters = movieScenes
     .filter((movie) => {
       return filterYear === "" ? true : movie.year === parseInt(filterYear);
@@ -57,7 +53,11 @@ function App() {
       if (filterName.length === 0) {
         return true;
       } else {
-        filterName.includes(movie.name);
+        if (movie.name.toLowerCase().includes(filterName.toLowerCase())) {
+          return true;
+        } else {
+          return "There are no movies with that name";
+        }
       }
     });
   return (
@@ -74,6 +74,7 @@ function App() {
                     years={getYears()}
                     filterByYear={filterByYear}
                     filterByName={filterByName}
+                    setFilterName={setFilterName}
                   />
                   <MovieSceneList movies={movieFilters} />
                 </>
