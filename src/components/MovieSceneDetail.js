@@ -1,7 +1,6 @@
 import "../styles/MovieSceneDetail.scss";
 import { useLocation, matchPath } from "react-router";
 import objectToExport from "../services/LocalStorage";
-
 function MovieSceneDetail() {
   //Buscar cual es la pelicula de la que quiero mostrar el detalle.
   //Obtenemos la ruta de la aplicación
@@ -12,19 +11,23 @@ function MovieSceneDetail() {
   const movieIndex = routeData !== null ? routeData.params.movieIndex : "";
   //Buscamos toda la información de la escena.
   const movies = objectToExport.get("movies", []);
-  const movieScene = movies.find((scene) => scene.id == movieIndex);
+  const movieScene = movies.find((scene) => scene.id === parseInt(movieIndex));
   console.log(movieScene);
   return (
     <section className="MovieSceneDetail">
       <img
-        src={movieScene?.poster}
+        src={movieScene.poster}
         className="MovieScene__card__image"
-        alt={`Poster de la película ${movieScene?.name}`}
-        title={`Poster de la película ${movieScene?.name}`}
+        alt={`Poster de la película ${movieScene.name}`}
+        title={`Poster de la película ${movieScene.name}`}
       />
-      <h2 className="MovieScene__card__name">{movieScene?.name}</h2>
-      <p className="MovieScene__card__fullLine">{movieScene?.fullLine}</p>
-      <p className="MovieScene__card__year">{movieScene?.year}</p>
+      <h2 className="MovieScene__card__name">{movieScene.name}</h2>
+      <p className="MovieScene__card__fullLine">{movieScene.fullLine}</p>
+      <p className="MovieScene__card__year">{movieScene.year}</p>
+      <p className="MovieScene__card__director">{movieScene.director}</p>
+      <a href={movieScene.audio} target="blank" className="MovieScene__audio">
+        {movieScene.audio}
+      </a>
     </section>
   );
 }
