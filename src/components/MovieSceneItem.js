@@ -9,9 +9,11 @@ function MovieSceneItem(props) {
         alt={`Poster de la película ${props.movieScene.name}`}
         title={`Poster de la película ${props.movieScene.name}`}
       />
-      <h2 className="MovieScene__name">{props.movieScene.name}</h2>
-      <p className="MovieScene__fullLine">{props.movieScene.fullLine}</p>
-      <p className="MovieScene__year">{props.movieScene.year}</p>
+      <div className="MovieScene__info">
+        <h2 className="MovieScene__name">{props.movieScene.name}</h2>
+        <p className="MovieScene__fullLine">{props.movieScene.fullLine}</p>
+        <p className="MovieScene__year">{props.movieScene.year}</p>
+      </div>
     </Link>
   );
 }

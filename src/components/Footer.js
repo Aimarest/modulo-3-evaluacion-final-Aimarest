@@ -3,11 +3,11 @@ import "../styles/Footer.scss";
 function Footer() {
   return (
     <section>
-      <legal>
-        <p className="Footer__text">
-          <i class="fa-regular fa-copyright"></i>2022 Ana Isabel Marcos Estévez
-        </p>
-      </legal>
+      <p className="Footer__text">
+        <i className="fa-regular fa-copyright"></i>2022 Ana Isabel Marcos
+        Estévez
+      </p>
+
       <nav className="Footer">
         <p className="Footer__text">
           If you are interested in contacting me, click on the icon of my social
@@ -20,7 +20,7 @@ function Footer() {
               href="https://www.linkedin.com/in/ana-marcos-est%C3%A9vez-7ab986232/"
               target="_blank"
             >
-              <i class="fa-brands fa-linkedin-in"></i>
+              <i className="fa-brands fa-linkedin-in"></i>
             </a>
           </li>
           <li className="Footer__link">
@@ -29,7 +29,7 @@ function Footer() {
               href="https://twitter.com/anamarcosestev1"
               target="_blank"
             >
-              <i class="fa-brands fa-twitter"></i>
+              <i className="fa-brands fa-twitter"></i>
             </a>
           </li>
           <li className="Footer__link">
@@ -38,7 +38,7 @@ function Footer() {
               href="https://github.com/aimarest"
               target="_blank"
             >
-              <i class="fa-brands fa-github-alt"></i>
+              <i className="fa-brands fa-github-alt"></i>
             </a>
           </li>
           <li className="Footer__link">
@@ -47,7 +47,7 @@ function Footer() {
               href="mailto:amarcosestevez@gmail.com"
               target="_blank"
             >
-              <i class="fa-solid fa-envelope"></i>
+              <i className="fa-solid fa-envelope"></i>
             </a>
           </li>
         </ul>
