@@ -17,8 +17,8 @@ function MovieSceneList(props) {
     );
   }
   return (
-    <section className="MovieScene__List">
-      <ul>{scenes}</ul>
+    <section className="MovieScene">
+      <ul className="MovieScene__list">{scenes}</ul>
     </section>
   );
 }

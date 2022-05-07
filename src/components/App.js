@@ -5,6 +5,7 @@ import getApiMovies from "../services/MoviesApi";
 import objectToExport from "../services/LocalStorage";
 import Header from "./Header";
 import Filters from "./Filters";
+import Footer from "./Footer";
 import MovieSceneList from "./MovieSceneList";
 import MovieSceneDetail from "./MovieSceneDetail";
 
@@ -109,6 +110,7 @@ function App() {
           </Routes>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
