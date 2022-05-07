@@ -1,4 +1,5 @@
 import "../styles/MovieSceneDetail.scss";
+import popcorn from "../images/popcorn.png";
 import { useLocation, matchPath } from "react-router";
 import objectToExport from "../services/LocalStorage";
 function MovieSceneDetail__() {
@@ -34,6 +35,12 @@ function MovieSceneDetail__() {
         >
           If you want to hear that "wow" click here
         </a>
+        <img
+          className="MovieSceneDetail__popcorn"
+          src={popcorn}
+          alt="popcorn"
+          title="popcorns"
+        />
       </div>
     </section>
   );

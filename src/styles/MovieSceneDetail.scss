@@ -7,6 +7,7 @@
     0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
     0 0 80px rgba(38, 104, 127, 1), 0 0 160px rgba(38, 104, 127, 1),
     0 0 200px rgba(38, 104, 127, 1);
+    position:relative;
     &__image{
         width:auto;
         height:70vh;
@@ -20,9 +21,10 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        
     }
     &__name{
-        margin-bottom:50px;
+        margin-bottom:60px;
         font-size: 45px;
         text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
         0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
@@ -52,6 +54,47 @@
         0 0 25px rgba(38,104,127,1),
         0 0 50px rgba(38,104,127,1),
         ;
+        margin:20px;
     }
+    &__popcorn{
+        position:absolute;
+        bottom:0px;
+        right: 0px;;
+        margin:20px;
+        width:100px;
+        height:auto;
         
+        animation-duration:3s;
+    animation-iteration-count: infinite;
+    animation-name: popcorn;
+    @keyframes popcorn {
+      from {
+        transform:rotate(-10deg)
+      }
+      20% {
+        transform:rotate(10deg)
+      } 
+      30% {
+        transform:rotate(-10deg)
+      }
+      40% {
+        transform:rotate(10deg)
+      }
+      50% {
+        transform:rotate(-10deg)
+      }
+      60% {
+        transform:rotate(10deg)
+      }
+      70% {
+        transform:rotate(-10deg)
+      }
+      80% {
+        transform:rotate(10deg)
+      }
+      to {
+        transform:rotate(-10deg) 
+      }
     }
+} 
+};
