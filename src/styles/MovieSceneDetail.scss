@@ -1,3 +1,57 @@
 .MovieSceneDetail{
-    
-}
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    color:white;
+    box-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+    0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
+    0 0 80px rgba(38, 104, 127, 1), 0 0 160px rgba(38, 104, 127, 1),
+    0 0 200px rgba(38, 104, 127, 1);
+    &__image{
+        width:auto;
+        height:70vh;
+        margin:30px;
+        border-radius: 20px;
+    }
+    &__info{
+        width:auto;
+        height:70vh;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__name{
+        margin-bottom:50px;
+        font-size: 45px;
+        text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+        0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
+        0 0 80px rgba(38, 104, 127, 1), 0 0 160px rgba(38, 104, 127, 1),
+        0 0 200px rgba(38, 104, 127, 1);
+    }
+    &__fullLine{
+        font-size: 30px;
+        margin:20px;
+    }
+    &__year{
+        font-size: 25px;
+        margin-top:10px;
+    }
+    &__director{
+        font-size: 25px;
+    }
+    &__link{
+        color:rgb(70, 215, 226);
+        font-size: 25px;
+        text-shadow:
+        0 0 0.5px rgba(0,178,255,1),
+        0 0 1px rgba(0,178,255,1),
+        0 0 2px rgba(0,178,255,1),
+        0 0 4px rgba(38,104,127,1),
+        0 0 15px rgba(38,104,127,1),
+        0 0 25px rgba(38,104,127,1),
+        0 0 50px rgba(38,104,127,1),
+        ;
+    }
+        
+    }

@@ -20,22 +20,21 @@ function MovieSceneDetail__() {
         alt={`Poster de la película ${movieScene.name}`}
         title={`Poster de la película ${movieScene.name}`}
       />
-      <h2 className="MovieSceneDetail__name">{movieScene.name}</h2>
-      <p className="MovieSceneDetail__fullLine">{movieScene.fullLine}</p>
-      <p className="MovieSceneDetail__year">{movieScene.year}</p>
-      <p className="MovieSceneDetail__director">{movieScene.director}</p>
-      <p>
-        <span className="MovieSceneDetail__audio">
-          If you want to hear that "wow" click on this link
-        </span>
+      <div className="MovieSceneDetail__info">
+        <h2 className="MovieSceneDetail__name">{movieScene.name}</h2>
+        <p className="MovieSceneDetail__director">
+          Directed by: {movieScene.director}
+        </p>{" "}
+        <p className="MovieSceneDetail__year">{movieScene.year}</p>
+        <p className="MovieSceneDetail__fullLine">{movieScene.fullLine}</p>
         <a
           href={movieScene.audio}
           target="blank"
           className="MovieSceneDetail__link"
         >
-          {movieScene.audio}
+          If you want to hear that "wow" click here
         </a>
-      </p>
+      </div>
     </section>
   );
 }
