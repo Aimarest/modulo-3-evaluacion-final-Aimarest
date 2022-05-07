@@ -1,0 +1,33 @@
+.MovieScene{
+    &__image{
+        width:auto;
+        height:300px;
+        border-radius: 10px;
+        box-shadow:
+        0 0 0.5px rgba(0,178,255,1),
+        0 0 1px rgba(0,178,255,1),
+        0 0 2px rgba(0,178,255,1),
+        0 0 4px rgba(38,104,127,1),
+        0 0 8px rgba(38,104,127,1),
+        0 0 16px rgba(38,104,127,1),
+        0 0 32px rgba(38,104,127,1),
+        ;
+    }
+    &__name{
+font-weight: 600;
+font-size: 20px;
+text-align: center;
+color:rgb(52, 9, 144);
+    }
+    &__fullLine{
+        font-weight: 400;
+        font-size: 14px;
+        width: 200px;
+        text-align: center;
+        margin:5px;
+    }
+    &__year{
+      text-align: center; 
+      font-weight: 600;
+    }
+}
