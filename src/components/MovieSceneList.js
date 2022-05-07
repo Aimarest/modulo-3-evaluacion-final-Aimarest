@@ -11,7 +11,7 @@ function MovieSceneList(props) {
   });
   if (props.movies.length === 0) {
     return (
-      <p>
+      <p className="MovieScene__error">
         Sorry,there are no scenes where Owen Wilson says "wow" in that movie
       </p>
     );
