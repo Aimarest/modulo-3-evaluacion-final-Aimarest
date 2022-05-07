@@ -1,50 +1,52 @@
-.MovieScene{
-    &__Item{
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+.MovieScene {
+  &__Item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    width: auto;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 0.5px rgba(0, 178, 255, 1), 0 0 1px rgba(0, 178, 255, 1),
+      0 0 2px rgba(0, 178, 255, 1), 0 0 4px rgba(38, 104, 127, 1),
+      0 0 8px rgba(38, 104, 127, 1), 0 0 16px rgba(38, 104, 127, 1),
+      0 0 32px rgba(38, 104, 127, 1);
+    &:hover {
+      transition: 0.3s ease-in-out;
+      width: auto;
+      height: 320px;
     }
-    &__image{
-        width:auto;
-        height:300px;
-        border-radius: 10px;
-        box-shadow:
-        0 0 0.5px rgba(0,178,255,1),
-        0 0 1px rgba(0,178,255,1),
-        0 0 2px rgba(0,178,255,1),
-        0 0 4px rgba(38,104,127,1),
-        0 0 8px rgba(38,104,127,1),
-        0 0 16px rgba(38,104,127,1),
-        0 0 32px rgba(38,104,127,1),
-        ;
+  }
+  &__info {
+    border-radius: 10px;
+    margin-top: 50px;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__name {
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    color: rgb(177, 152, 238);
+    &:hover {
+      color: rgb(30, 148, 148);
     }
-    &__info{
-        border-radius: 10px;
-        margin-top:50px;
-        width:auto;
-        height: auto;
-        display:flex;
-        justify-content:center;
-        flex-direction: column;
-    }
-    &__name{
-font-weight: 600;
-font-size: 22px;
-text-align: center;
-color:rgb(177, 152, 238);
-
-    }
-    &__fullLine{
-        font-weight: 400;
-        font-size: 20px;
-        text-align: center;
-        margin:5px;
-        color:rgb(174, 44, 174);
-    }
-    &__year{
-      text-align: center; 
-      font-weight: 600;
-      color:rgb(177, 152, 238);
-    }
+  }
+  &__fullLine {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    margin: 5px;
+    color: rgb(174, 44, 174);
+  }
+  &__year {
+    text-align: center;
+    font-weight: 600;
+    color: rgb(177, 152, 238);
+  }
 }
