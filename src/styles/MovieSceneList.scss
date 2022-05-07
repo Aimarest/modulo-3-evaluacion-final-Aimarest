@@ -1,11 +1,25 @@
 .MovieScene {
-background-color: rgb(5, 6, 6);
+background-color: rgb(19, 18, 19);
 &__list{
 display: grid;
 grid-template-columns: repeat(5, 1fr);
 grid-template-rows: repeat(10, 1fr);
-grid-gap: 10px;
+grid-gap: 20px;
 
+}
+&__title{
+    font-size: 40px;;
+    padding:20px;
+    color:black;
+    text-shadow:
+0 0 2px rgba(0,178,255,1),
+0 0 4px rgba(0,178,255,1),
+0 0 8px rgba(0,178,255,1),
+0 0 16px rgba(38,104,127,1),
+0 0 32px rgba(38,104,127,1),
+0 0 64px rgba(38,104,127,1),
+0 0 128px rgba(38,104,127,1),
+;
 }
 &__card{
 padding: 20px;

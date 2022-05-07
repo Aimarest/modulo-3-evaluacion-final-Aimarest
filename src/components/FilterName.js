@@ -1,3 +1,4 @@
+import "../styles/FilterName.scss";
 function FilterName(props) {
   const handleChangeName = (ev) => {
     ev.preventDefault();
@@ -5,10 +6,12 @@ function FilterName(props) {
     props.filterByName(ev.target.value);
   };
   return (
-    <>
-      <label htmlFor="inputSearch">Search movie</label>
+    <section className="search">
+      <label className="search__label" htmlFor="inputSearch">
+        Search movie
+      </label>
       <input
-        className="search"
+        className="search__input"
         autoComplete="off"
         type="search"
         name="inputSearch"
@@ -16,7 +19,7 @@ function FilterName(props) {
         onChange={handleChangeName}
         value={props.filterName}
       />
-    </>
+    </section>
   );
 }
 export default FilterName;

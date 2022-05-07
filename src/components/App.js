@@ -101,7 +101,6 @@ function App() {
                     filterByName={filterByName}
                     setFilterName={setFilterName}
                   />
-                  <h1>Total scenes: {movieFilters.length}</h1>
                   <MovieSceneList movies={movieFilters} />
                 </>
               }

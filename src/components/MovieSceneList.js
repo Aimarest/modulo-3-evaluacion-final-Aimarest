@@ -18,6 +18,7 @@ function MovieSceneList(props) {
   }
   return (
     <section className="MovieScene">
+      <h2 className="MovieScene__title">Total scenes: {props.movies.length}</h2>
       <ul className="MovieScene__list">{scenes}</ul>
     </section>
   );
