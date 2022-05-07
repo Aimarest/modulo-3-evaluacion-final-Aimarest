@@ -41,9 +41,12 @@ function App() {
     const yearMovies = movieScenes.map((movie) => movie.year);
     // Función que filtra para que ningún año se repita:
 
-    const uniqueYear = yearMovies.filter((movie, i) => {
-      return yearMovies.indexOf(movie) === i;
-    });
+    const uniqueYear = yearMovies
+      .sort((a, b) => a - b)
+      .filter((movie, i) => {
+        return yearMovies.indexOf(movie) === i;
+      });
+
     return uniqueYear;
   };
 
