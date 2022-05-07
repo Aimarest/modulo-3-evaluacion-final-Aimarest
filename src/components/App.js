@@ -39,7 +39,8 @@ function App() {
   //Función que agrupa los años de las películas en una constante.
   const getYears = () => {
     const yearMovies = movieScenes.map((movie) => movie.year);
-    // Función que filtra para que ningún año se repita:
+
+    // Función que ordena los años de menor a mayor y filtra para que ningún año se repita :
 
     const uniqueYear = yearMovies
       .sort((a, b) => a - b)
@@ -62,6 +63,7 @@ function App() {
   };
 
   const movieFilters = movieScenes
+    .sort((a, b) => (a.name > b.name ? 1 : a.name < b.name ? -1 : 0))
     .filter((movie) => {
       return filterYear === "" ? true : movie.year === parseInt(filterYear);
     })
