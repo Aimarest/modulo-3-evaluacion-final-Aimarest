@@ -2,13 +2,13 @@ import "../styles/Footer.scss";
 
 function Footer() {
   return (
-    <section>
+    <section className="Footer">
       <p className="Footer__text">
         <i className="fa-regular fa-copyright"></i>2022 Ana Isabel Marcos
         Estévez
       </p>
 
-      <nav className="Footer">
+      <nav className="Footer__nav">
         <p className="Footer__text">
           If you are interested in contacting me, click on the icon of my social
           networks:
