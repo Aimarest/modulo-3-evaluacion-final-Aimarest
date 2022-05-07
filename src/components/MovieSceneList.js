@@ -9,6 +9,13 @@ function MovieSceneList(props) {
       </li>
     );
   });
+  if (props.movies.length === 0) {
+    return (
+      <p>
+        Sorry,there are no scenes where Owen Wilson says "wow" in that movie
+      </p>
+    );
+  }
   return (
     <section className="MovieScene__List">
       <ul>{scenes}</ul>
