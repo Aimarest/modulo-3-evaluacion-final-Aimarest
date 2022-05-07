@@ -1,0 +1,16 @@
+.Header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 50px;
+    text-shadow:
+    0 0 0.5px rgba(0,178,255,1),
+    0 0 1px rgba(0,178,255,1),
+    0 0 2px rgba(0,178,255,1),
+    0 0 4px rgba(38,104,127,1),
+    0 0 8px rgba(38,104,127,1),
+    0 0 16px rgba(38,104,127,1),
+    0 0 32px rgba(38,104,127,1),
+    ;
+}
