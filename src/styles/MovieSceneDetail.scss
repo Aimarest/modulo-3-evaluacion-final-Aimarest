@@ -3,16 +3,20 @@
     justify-content:space-around;
     align-items: center;
     color:white;
-    box-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
-    0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
-    0 0 80px rgba(38, 104, 127, 1), 0 0 160px rgba(38, 104, 127, 1),
-    0 0 200px rgba(38, 104, 127, 1);
+    box-shadow: 0 0 2px rgba(0, 178, 255, 1), 0 0 6px rgba(0, 178, 255, 1),
+    0 0 10px rgba(0, 178, 255, 1), 0 0 30px rgba(38, 104, 127, 1),
+    0 0 50px rgba(38, 104, 127, 1), 0 0 80px rgba(38, 104, 127, 1),
+    0 0 100px rgba(38, 104, 127, 1);
     position:relative;
     &__image{
         width:auto;
         height:70vh;
         margin:30px;
         border-radius: 20px;
+        box-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+        0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
+        0 0 80px rgba(38, 104, 127, 1), 0 0 160px rgba(38, 104, 127, 1),
+        0 0 100px rgba(38, 104, 127, 1);
     }
     &__info{
         width:auto;
@@ -27,9 +31,9 @@
         margin-bottom:60px;
         font-size: 45px;
         text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
-        0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
-        0 0 80px rgba(38, 104, 127, 1), 0 0 160px rgba(38, 104, 127, 1),
-        0 0 200px rgba(38, 104, 127, 1);
+        0 0 20px rgba(0, 178, 255, 1), 0 0 30px rgba(38, 104, 127, 1),
+        0 0 50px rgba(38, 104, 127, 1), 0 0 60px rgba(38, 104, 127, 1),
+        0 0 80px rgba(38, 104, 127, 1);
     }
     &__fullLine{
         font-size: 30px;

@@ -5,13 +5,13 @@
     height: 200px;
     font-size: 50px;
     text-shadow:
-    0 0 0.5px rgba(0,178,255,1),
-    0 0 1px rgba(0,178,255,1),
-    0 0 2px rgba(0,178,255,1),
-    0 0 4px rgba(38,104,127,1),
-    0 0 15px rgba(38,104,127,1),
-    0 0 25px rgba(38,104,127,1),
+    0 0 5px rgba(0,178,255,1),
+    0 0 10px rgba(0,178,255,1),
+    0 0 20px rgba(0,178,255,1),
+    0 0 40px rgba(38,104,127,1),
     0 0 50px rgba(38,104,127,1),
+    0 0 70px rgba(38,104,127,1),
+    0 0 100px rgba(38,104,127,1),
     ;
     &__title{
         text-transform: capitalize;
