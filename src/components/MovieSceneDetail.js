@@ -12,7 +12,6 @@ function MovieSceneDetail__() {
   //Buscamos toda la información de la escena.
   const movies = objectToExport.get("movies", []);
   const movieScene = movies.find((scene) => scene.id === parseInt(movieIndex));
-  console.log(movieScene);
   return (
     <section className="MovieSceneDetail">
       <img

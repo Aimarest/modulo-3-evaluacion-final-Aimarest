@@ -1,7 +1,6 @@
 import "../styles/App.scss";
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import { matchPath, useLocation } from "react-router";
 import getApiMovies from "../services/MoviesApi";
 import objectToExport from "../services/LocalStorage";
 import Header from "./Header";
@@ -15,7 +14,9 @@ function App() {
   const [movieScenes, setMovieScenes] = useState(
     objectToExport.get("movies", [])
   );
-  const [filterYear, setFilterYear] = useState("");
+  //Buscamos en el ls el valor del select del año.
+  const yearSearch = objectToExport.get("yearSearch", "");
+  const [filterYear, setFilterYear] = useState(yearSearch);
   const [filterName, setFilterName] = useState(inputText);
   useEffect(() => {
     // Usamos un useEffect para ejecutar el fetch() una sóla vez al cargar la página.
@@ -55,12 +56,15 @@ function App() {
 
   const filterByYear = (value) => {
     setFilterYear(value);
+    objectToExport.set("yearSearch", value);
   };
+
   //Fitro por nombre:
   const filterByName = (value) => {
     setFilterName(value);
     objectToExport.set("inputText", value);
   };
+  //Ordenar las películas por orden alfabético y filtrado:
 
   const movieFilters = movieScenes
     .sort((a, b) => (a.name > b.name ? 1 : a.name < b.name ? -1 : 0))
@@ -75,6 +79,7 @@ function App() {
           return true;
         }
       }
+      return false;
     });
   return (
     <div className="App">
@@ -89,19 +94,18 @@ function App() {
                   <Filters
                     filterName={filterName}
                     years={getYears()}
+                    filterYear={filterYear}
                     filterByYear={filterByYear}
+                    setFilterYear={setFilterYear}
                     filterByName={filterByName}
                     setFilterName={setFilterName}
                   />
-                  <h1>total: {movieFilters.length}</h1>
+                  <h1>Total scenes: {movieFilters.length}</h1>
                   <MovieSceneList movies={movieFilters} />
                 </>
               }
             />
-            <Route
-              path="/movie/:movieIndex"
-              element={<MovieSceneDetail /*movie={movieFound} */ />}
-            />
+            <Route path="/movie/:movieIndex" element={<MovieSceneDetail />} />
           </Routes>
         </section>
       </main>

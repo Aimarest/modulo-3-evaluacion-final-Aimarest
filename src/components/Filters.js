@@ -3,7 +3,6 @@ import FilterName from "./FilterName";
 import FilterYear from "./FilterYear";
 
 function Filters(props) {
-  console.log(props.filterName);
   const handleForm = (event) => {
     event.preventDefault();
   };
@@ -13,7 +12,11 @@ function Filters(props) {
         filterByName={props.filterByName}
         filterName={props.filterName}
       />
-      <FilterYear years={props.years} filterByYear={props.filterByYear} />
+      <FilterYear
+        years={props.years}
+        filterYear={props.filterYear}
+        filterByYear={props.filterByYear}
+      />
     </form>
   );
 }
