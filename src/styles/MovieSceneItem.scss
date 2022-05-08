@@ -7,7 +7,7 @@
   }
   &__image {
     width: auto;
-    height: 300px;
+    height: 200px;
     border-radius: 10px;
     box-shadow: 0 0 0.5px rgba(0, 178, 255, 1), 0 0 1px rgba(0, 178, 255, 1),
       0 0 2px rgba(0, 178, 255, 1), 0 0 4px rgba(38, 104, 127, 1),
@@ -18,24 +18,31 @@
       width: auto;
       height: 320px;
     }
+    @media all and (min-width:1400px){
+      height: 300px;
+      }
   }
   &__info {
     border-radius: 10px;
-    margin-top: 50px;
+    margin-top: 20px;
     width: auto;
     height: auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
+   
   }
   &__name {
     font-weight: 600;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
     color: rgb(177, 152, 238);
     &:hover {
       color: rgb(30, 148, 148);
     }
+    @media all and (min-width:1400px){
+      font-size: 40px;
+      }
   }
   &__fullLine {
     font-weight: 400;
@@ -43,10 +50,16 @@
     text-align: center;
     margin: 5px;
     color: rgb(174, 44, 174);
+    @media all and (min-width:1400px){
+      font-size: 30px;
+      }
   }
   &__year {
     text-align: center;
     font-weight: 600;
     color: rgb(177, 152, 238);
+    @media all and (min-width:1400px){
+      font-size: 30px;
+      }
   }
 }
