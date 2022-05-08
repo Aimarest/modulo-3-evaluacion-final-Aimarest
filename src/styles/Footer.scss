@@ -17,15 +17,12 @@
             }
     &__list{
         display:flex;
-    }
-    &__text{
-        margin:10px;
-    }
-    &__link{
-        display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+    &__text{
+        margin:10px;
     }
     &__icon{
         display:block;
@@ -34,8 +31,12 @@
         margin:10px 30px;
         &:hover{
         transition: 0.3s ease-in-out;
-        font-size: 22px;
+        font-size: 32px;
         color:black;
+        @media all and (min-width:768px){
+            font-size: 44px;
+            margin:20px 70px;
+        }
         }
         @media all and (min-width:768px){
             font-size: 40px;

@@ -16,7 +16,10 @@
     &:hover {
       transition: 0.3s ease-in-out;
       width: auto;
-      height: 320px;
+      height: 240px;
+      @media all and (min-width:1400px){
+        height: 320px;
+        }
     }
     @media all and (min-width:1400px){
       height: 300px;

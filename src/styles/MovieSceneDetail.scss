@@ -101,6 +101,16 @@
         0 0 50px rgba(38,104,127,1),
         ;
         margin:5px;
+        &:hover {
+          transition: 0.2s ease-in-out;
+          font-size:25px;
+          @media all and (min-width:768px){
+            font-size:30px;
+          }
+          @media all and (min-width:2000px){
+            font-size: 40px;
+            }
+        }
         @media all and (min-width:768px){
           text-align: center;
           font-size: 25px;

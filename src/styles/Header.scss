@@ -16,10 +16,11 @@
     ;
     @media all and (min-width:768px){
         font-size: 35px;
+        height: 200px;
     }
     @media all and (min-width:2000px){
         font-size: 60px;
-        height: 300px;
+        height: 500px;
         }
     &__title{
         text-transform: capitalize;
