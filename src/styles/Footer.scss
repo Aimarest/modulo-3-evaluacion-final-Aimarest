@@ -1,5 +1,6 @@
 .Footer{
-    height: 250px;
+    text-align: center;
+    height: 200px;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -10,21 +11,39 @@
         0 0 2px rgba(0, 178, 255, 1), 0 0 4px rgba(38, 104, 127, 1),
         0 0 15px rgba(38, 104, 127, 1), 0 0 25px rgba(38, 104, 127, 1),
         0 0 50px rgba(38, 104, 127, 1);
+        @media all and (min-width:2000px){
+            font-size: 30px;
+            height: 400px;
+            }
     &__list{
         display:flex;
     }
     &__text{
-        margin:20px;
+        margin:10px;
+    }
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
     &__icon{
         display:block;
         color:white;
-        font-size: 40px;
-        margin:20px 60px;
+        font-size: 30px;
+        margin:10px 30px;
         &:hover{
         transition: 0.3s ease-in-out;
-        font-size: 45px;
+        font-size: 22px;
         color:black;
         }
+        @media all and (min-width:768px){
+            font-size: 40px;
+            margin:20px 70px;
+        }
+        @media all and (min-width:2000px){
+            font-size: 60px;
+            margin:30px 100px;
+            }
     }
 }
