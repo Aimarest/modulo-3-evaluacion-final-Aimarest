@@ -1,4 +1,5 @@
 .MovieSceneDetail{
+  height: 70vh;
     display:flex;
     justify-content:space-around;
     align-items: center;
@@ -8,47 +9,88 @@
     0 0 50px rgba(38, 104, 127, 1), 0 0 80px rgba(38, 104, 127, 1),
     0 0 100px rgba(38, 104, 127, 1);
     position:relative;
+    @media all and (min-width:768px){
+      flex-direction: row-reverse;
+    }
     &__image{
         width:auto;
-        height:70vh;
+        height:30vh;
         margin:30px;
         border-radius: 20px;
         box-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
         0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
         0 0 80px rgba(38, 104, 127, 1), 0 0 160px rgba(38, 104, 127, 1),
         0 0 100px rgba(38, 104, 127, 1);
+        @media all and (min-width:768px){
+          height:60vh;
+        }
     }
     &__info{
+      text-align: center;
         width:auto;
-        height:70vh;
+        height:30vh;
         display:flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        @media all and (min-width:768px){
+          height: 60vh;
+        }
+        @media all and (min-width:2000px){
+        height: 70vh;
+          }
         
     }
     &__name{
-        margin-bottom:60px;
-        font-size: 45px;
+        margin-bottom:20px;
+        font-size: 30px;
         text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
         0 0 20px rgba(0, 178, 255, 1), 0 0 30px rgba(38, 104, 127, 1),
         0 0 50px rgba(38, 104, 127, 1), 0 0 60px rgba(38, 104, 127, 1),
         0 0 80px rgba(38, 104, 127, 1);
+        @media all and (min-width:768px){
+          font-size: 40px;
+          margin-bottom: 60px;
+        }
+        @media all and (min-width:2000px){
+          font-size: 60px;
+          }
     }
     &__fullLine{
-        font-size: 30px;
-        margin:20px;
+        font-size: 20px;
+        margin:10px;
+        @media all and (min-width:768px){
+          font-size: 30px;
+          margin-bottom: 20px;
+        }
+        @media all and (min-width:2000px){
+          font-size: 40px;
+          }
     }
     &__year{
-        font-size: 25px;
-        margin-top:10px;
+        font-size: 18px;
+        margin-top:5px;
+        @media all and (min-width:768px){
+          font-size: 25px;
+          margin-bottom: 20px;
+        }
+        @media all and (min-width:2000px){
+          font-size: 30px;
+          }
     }
     &__director{
-        font-size: 25px;
+        font-size: 18px;
+        @media all and (min-width:768px){
+          font-size: 25px;
+          margin-bottom: 20px;
+        }
+        @media all and (min-width:2000px){
+          font-size: 30px;
+          }
     }
     &__link{
         color:rgb(70, 215, 226);
-        font-size: 25px;
+        font-size: 20px;
         text-shadow:
         0 0 0.5px rgba(0,178,255,1),
         0 0 1px rgba(0,178,255,1),
@@ -58,15 +100,43 @@
         0 0 25px rgba(38,104,127,1),
         0 0 50px rgba(38,104,127,1),
         ;
-        margin:20px;
+        margin:5px;
+        @media all and (min-width:768px){
+          text-align: center;
+          font-size: 25px;
+          margin-bottom: 20px;
+        }
+        @media all and (min-width:2000px){
+        font-size: 40px;
+        }
     }
     &__popcorn{
         position:absolute;
-        bottom:0px;
-        right: 0px;;
-        margin:20px;
-        width:100px;
+        bottom:20px;
+        left: 20px;;
+        margin:5px;
+        width:70px;
         height:auto;
+        @media all and (min-width:768px){
+        width:60px;
+        bottom: 0px;
+        left:2px;
+        }
+        @media all and (min-width:1020px){
+          width:70px;
+          bottom: 10px;
+          left:10px;
+        }
+        @media all and (min-width:1440px){
+          width:100px;
+          bottom: 20px;
+          left:20px;
+        }
+        @media all and (min-width:2000px){
+          width:200px;
+          bottom: 40px;
+          left:40px;
+        }
         
         animation-duration:3s;
     animation-iteration-count: infinite;
@@ -100,5 +170,7 @@
         transform:rotate(-10deg) 
       }
     }
+    
+    
 } 
 };
