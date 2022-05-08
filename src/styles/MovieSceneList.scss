@@ -1,49 +1,65 @@
 .MovieScene {
-background-color: rgb(19, 18, 19);
-&__list{
-display: grid;
-grid-template-columns: repeat(5, 1fr);
-grid-template-rows: repeat(10, 1fr);
-grid-gap: 20px;
-
-}
-&__title{
-    font-size: 40px;;
-    padding:20px;
-    color:black;
-    text-shadow:
-0 0 2px rgba(0,178,255,1),
-0 0 4px rgba(0,178,255,1),
-0 0 8px rgba(0,178,255,1),
-0 0 16px rgba(38,104,127,1),
-0 0 32px rgba(38,104,127,1),
-0 0 64px rgba(38,104,127,1),
-0 0 128px rgba(38,104,127,1),
-;
-}
-&__card{
-padding: 20px;
-display:flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-background-color:black;
-border-radius: 20px;
-box-shadow:
-0 0 2px rgba(0,178,255,1),
-0 0 4px rgba(0,178,255,1),
-0 0 8px rgba(0,178,255,1),
-0 0 16px rgba(38,104,127,1),
-0 0 32px rgba(38,104,127,1),
-0 0 64px rgba(38,104,127,1),
-0 0 128px rgba(38,104,127,1),
-;
-}
-&__error{
-    color:white;
-    font-size: 40px;
-    text-align: center;
-    margin-top:300px;
-    height: 50vh;
-}
-}
+    background-color: rgb(19, 18, 19);
+    &__list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(25, 1fr);
+    grid-gap: 2px;
+    @media all and (min-width:768px){
+        grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    }
+    }
+    &__title{
+        font-size: 20px;;
+        padding:20px;
+        color:black;
+        text-shadow:
+    0 0 2px rgba(0,178,255,1),
+    0 0 4px rgba(0,178,255,1),
+    0 0 8px rgba(0,178,255,1),
+    0 0 16px rgba(38,104,127,1),
+    0 0 32px rgba(38,104,127,1),
+    0 0 64px rgba(38,104,127,1),
+    0 0 128px rgba(38,104,127,1),
+    ;
+    @media all and (min-width:768px){
+        font-size: 30px;
+    }
+    }
+    &__card{
+    padding:20px 2px 20px 2px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:black;
+    border-radius: 20px;
+    box-shadow:
+    0 0 2px rgba(0,178,255,1),
+    0 0 4px rgba(0,178,255,1),
+    0 0 8px rgba(0,178,255,1),
+    0 0 16px rgba(38,104,127,1),
+    0 0 32px rgba(38,104,127,1),
+    0 0 64px rgba(38,104,127,1),
+    0 0 128px rgba(38,104,127,1),
+    ;
+    @media all and (min-width:768px){
+        padding:20px 5px 20px 5px;
+    }
+    }
+    &__error{
+        color:white;
+        font-size: 20px;
+        text-align: center;
+        margin-top:300px;
+        height: 50vh;
+        @media all and(min-width:768px){
+            font-size: 30px;
+        }
+        @media all and (min-width:2000px){
+            font-size: 50px;
+            }
+    }
+    }
+    
