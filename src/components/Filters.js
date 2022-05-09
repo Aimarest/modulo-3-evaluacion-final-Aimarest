@@ -1,7 +1,7 @@
 import "../styles/Filters.scss";
 import FilterName from "./FilterName";
 import FilterYear from "./FilterYear";
-
+import FilterDirector from "./FilterDirector";
 function Filters(props) {
   const handleForm = (event) => {
     event.preventDefault();
@@ -16,6 +16,11 @@ function Filters(props) {
         years={props.years}
         filterYear={props.filterYear}
         filterByYear={props.filterByYear}
+      />
+      <FilterDirector
+        listDirector={props.listDirector}
+        filterDirector={props.filterDirector}
+        filterByDirector={props.filterByDirector}
       />
     </form>
   );

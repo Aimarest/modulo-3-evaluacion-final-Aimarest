@@ -1,7 +1,7 @@
 import "../styles/MovieSceneList.scss";
 import MovieSceneItem from "./MovieSceneItem";
 
-function MovieSceneList(props) {
+function MovieSceneList(props) { //Guardo en una constante un array que resulta de recorrer el array de escenas para pintar cada una en un movieItem, que va a ser un li de la lista. A movieItem le tengo que pasar por props la escena que va  a pintar y su id.
   const scenes = props.movies.map((movieScene, index) => {
     return (
       <li className="MovieScene__card" key={index}>

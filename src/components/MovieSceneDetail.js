@@ -9,7 +9,8 @@ function MovieSceneDetail__() {
   //Buscamos si coincide con la ruta dinámica
   const routeData = matchPath("movie/:movieIndex", pathname);
   //Buscamos el index de la película
-  const movieIndex = routeData !== null ? routeData.params.movieIndex : "";
+  const movieIndex = routeData !== null ? routeData.params.movieIndex : ""; //Si routeData es distinto de null significa que coincide la ruta dinámica con la ruta de la aplicación,por lo que tengo que obtener ese movieIndex.
+
   //Buscamos toda la información de la escena.
   const movies = objectToExport.get("movies", []);
   const movieScene = movies.find((scene) => scene.id === parseInt(movieIndex));

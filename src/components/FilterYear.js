@@ -1,6 +1,6 @@
 import "../styles/FilterYear.scss";
 function FilterYear(props) {
-  //Función que recorre el array de años y los pinta
+  //Función que recorre el array de años (ya ordenados y únicos) y pinta cada uno como un option del select, con value=año y key= a su index del array.
   const renderYear = () => {
     return props.years.map((year, i) => {
       return (
@@ -11,7 +11,7 @@ function FilterYear(props) {
     });
   };
   const handleChangeYear = (ev) => {
-    props.filterByYear(ev.target.value);
+    props.filterByYear(ev.target.value); //Función que pasa por lifting el value del option seleccionado.
   };
   return (
     <section className="search">
@@ -21,7 +21,7 @@ function FilterYear(props) {
       <select
         className="search__select"
         id="year"
-        value={props.filterYear}
+        value={props.filterYear} //La variable de estado del select, para tenerlo controlado.
         onChange={handleChangeYear}
       >
         <option value="">All</option>
