@@ -19,7 +19,7 @@ describe('check the title of the page', () => {
   })
 })
 
-//Test que comprueba que el input de búsqueda funciona:
+//Test que comprueba que el input de filtrar búsqueda funciona:
 
     describe('check the search input-text action', () => {
       it('should get the value of the input and check that search the correct scenes', () => {
